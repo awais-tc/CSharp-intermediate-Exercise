@@ -125,12 +125,14 @@ namespace Classes
             //oracle.Open();
             //oracle.Close();
 
+            Console.WriteLine("Starting Activities");
 
             var workflow = new Workflow();
             workflow.AddActivity(new UploadVideoActivity());
             workflow.AddActivity(new NotifyVideoProcessingActivity());
             workflow.AddActivity(new ChangeVideoStatusActivity());
             workflow.AddActivity(new CallEncodingServiceActivity());
+
 
             // Create and run the workflow engine
             var workflowEngine = new WorkflowEngine();
